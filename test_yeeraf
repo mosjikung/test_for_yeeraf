@@ -41,7 +41,7 @@ export default {
         }
     }
     if(status_check === false){
-        return "The are no two numbers that add up to"+ " "+ target
+        return "no out put The are no two numbers that add up to"+ " "+ target
     }
 };
 
