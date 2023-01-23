@@ -30,7 +30,7 @@ export default {
 
   called_Threefive(100)
 
-  var Sum2Elements= function(nums, target) {
+   function Sum2Elements (nums, target){
     var status_check = false
     for(let i = 0; i < nums.length; i++){
         for(let j = i+1; j < nums.length; j++){
