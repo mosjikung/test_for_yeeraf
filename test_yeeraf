@@ -1,0 +1,55 @@
+<template>
+   
+   <div></div>
+</template>
+
+<script>
+
+export default {
+    data(){
+        return{
+            
+        }
+    },
+ mounted(){
+   
+  function called_Threefive(val){
+
+      for(let ax=1; ax<=val; ax++){
+        if(ax % 3 === 0 && ax % 5 === 0){
+          console.log("ThreeFive")
+        }else if(ax % 5 === 0){
+          console.log('Five')
+        }else if(ax % 3 === 0){
+          console.log('Three')
+        }else{
+            console.log(ax)
+        }
+      }
+  }
+
+  called_Threefive(100)
+
+  var Sum2Elements= function(nums, target) {
+    var status_check = false
+    for(let i = 0; i < nums.length; i++){
+        for(let j = i+1; j < nums.length; j++){
+            if(nums[i] + nums[j] === target){
+                status_check = true
+                return [i, j]
+            }
+        }
+    }
+    if(status_check === false){
+        return "The are no two numbers that add up to"+ " "+ target
+    }
+};
+
+  console.log(Sum2Elements([3,2],3))
+}
+}
+</script>
+
+<style>
+
+</style>
