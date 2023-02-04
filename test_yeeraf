@@ -1,36 +1,85 @@
-<template>
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
    
-   <div></div>
-</template>
-
-<script>
-
-export default {
-    data(){
-        return{
-            
-        }
-    },
- mounted(){
-   
-  function called_Threefive(val){
-
-      for(let ax=1; ax<=val; ax++){
-        if(ax % 3 === 0 && ax % 5 === 0){
-          console.log("ThreeFive")
-        }else if(ax % 5 === 0){
-          console.log('Five')
-        }else if(ax % 3 === 0){
+  function called_Threefive(nums,round){
+    for(let ay = 0; ay<nums.length; ay++){
+      
+      if(isPrime(nums[ay]) === true){
+      for(let ax=1; ax<=round; ax++){
+        if(nums.length === 5){
+        if(ax % nums[0] === 0 && ax % nums[1] === 0 && ax % nums[2] === 0 && ax % nums[3] === 0 && ax % nums[4] === 0){
+          console.log("ThreeFiveSevenElevenThirteen")
+        }else if(ax % nums[0] === 0){
           console.log('Three')
+        }else if(ax % nums[1] === 0){
+          console.log('Five')
+        }else if(ax % nums[2] === 0){
+          console.log('Seven')
+        }else if(ax % nums[3] === 0){
+          console.log('Eleven')
+        }else if(ax % nums[4] === 0){
+          console.log('Thirteen')
         }else{
             console.log(ax)
         }
+        }else if(nums.length === 4){
+        if(ax % nums[0] === 0 && ax % nums[1] === 0 && ax % nums[2] === 0 && ax % nums[3] === 0){
+          console.log("ThreeFiveSevenEleven")
+        }else if(ax % nums[0] === 0){
+          console.log('Three')
+        }else if(ax % nums[1] === 0){
+          console.log('Five')
+        }else if(ax % nums[2] === 0){
+          console.log('Seven')
+        }else if(ax % nums[3] === 0){
+          console.log('Eleven')
+        }else{
+            console.log(ax)
+        }
+        }else if(nums.length === 3){
+        if(ax % nums[0] === 0 && ax % nums[1] === 0 && ax % nums[2] === 0 ){
+          console.log("ThreeFiveSeven")
+        }else if(ax % nums[0] === 0){
+          console.log('Three')
+        }else if(ax % nums[1] === 0){
+          console.log('Five')
+        }else if(ax % nums[2] === 0){
+          console.log('Seven')
+        }else{
+            console.log(ax)
+        }
+        }else if(nums.length === 2){
+        if(ax % nums[0] === 0 && ax % nums[1] === 0){
+          console.log("ThreeFive")
+        }else if(ax % nums[0] === 0){
+          console.log('Three')
+        }else if(ax % nums[1] === 0){
+          console.log('Five')
+        }else{
+            console.log(ax)
+        }
+        }else if(nums.length === 1){
+        if(ax % nums[0] === 0){
+          console.log("Three")
+        }else{
+            console.log(ax)
+        }
+        }
+      }
+      }else{
+        console.log("It's not Prim number")
+      }
       }
   }
 
-  called_Threefive(100)
+  called_Threefive([3,5,7,11,13],100)
 
-   function Sum2Elements (nums, target){
+   function Sum2Elements (nums, target) {
     var status_check = false
     for(let i = 0; i < nums.length; i++){
         for(let j = i+1; j < nums.length; j++){
@@ -46,10 +95,3 @@ export default {
 };
 
   console.log(Sum2Elements([3,2],3))
-}
-}
-</script>
-
-<style>
-
-</style>
